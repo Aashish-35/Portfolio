@@ -37,7 +37,7 @@ const Home = () => {
               <FaLinkedin size={28} />
             </a>
             <a
-              href="https://x.com/yourusername"
+              href="https://x.com/aashish_stha___"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side: Profile Picture */}
         <div className="image-content animate-text delay-2">
           <img src="/profile.png" alt="Aashish Profile" className="profile-img" />
         </div>

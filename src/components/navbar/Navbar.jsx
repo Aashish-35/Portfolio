@@ -17,7 +17,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* <div className="nav-logo">Aashish</div> */}
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navItems.map((item) => (
