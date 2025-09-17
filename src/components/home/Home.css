@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #f4f1de, #81b29a, #f2cc8f, #e07a5f);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.section-content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.section-content h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
+  color: #2e3a59;
+}
+
+.instant-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #3d405b;
+  margin-bottom: 15px;
+  opacity: 1 !important; 
+  transform: none !important;
+}
+
+.section-content p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.highlight {
+  color: #e07a5f;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #3d405b, #81b29a);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  color: #3d405b;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e07a5f;
+  transform: translateY(-3px) scale(1.1);
+}
+
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.animate-text.delay-1 { animation-delay: 0.6s; }
+.animate-text.delay-2 { animation-delay: 0.9s; }
+.animate-text.delay-3 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-content h1 {
+    font-size: 2rem;
+  }
+  .instant-text {
+    font-size: 0.95rem;
+  }
+  .section-content p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+  .social-icons a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+}
+

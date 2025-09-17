@@ -1,0 +1,130 @@
+.skills-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin: 40px 0;     
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #00e6e6;
+  text-shadow: 0 0 10px rgba(0, 230, 230, 0.6);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skill-card {
+  background: #292945;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  transition: 0.4s ease;
+  text-align: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 12px 20px rgba(0, 230, 230, 0.6);
+}
+
+.skill-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #00e6e6;
+}
+
+.skill-card:hover .skill-icon {
+  transform: rotate(10deg) scale(1.2);
+  color: #00ff99;
+}
+
+.skill-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  background: #444;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00e6e6, #00ff99);
+  border-radius: 10px;
+  animation: fillAnimation 2s ease-out;
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 5px;
+  display: block;
+}
+
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section {
+    padding: 60px 20px; 
+    margin: 30px 0;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-section {
+    padding: 50px 15px;
+    margin: 25px 0;
+  }
+
+  .skill-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .skill-icon {
+    font-size: 40px;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+  }
+}
