@@ -1,0 +1,126 @@
+.education-section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.education-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #00d4ff;
+  text-align: center;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  justify-items: center;
+}
+
+.education-card {
+  background: linear-gradient(135deg, #2a2a4a 0%, #1f1f3a 100%);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+.edu-icon {
+  font-size: 3rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  animation: bounceIn 0.8s ease;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #b0b0ff;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .education-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .education-card {
+    padding: 30px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-subtitle {
+    font-size: 1.1rem;
+  }
+}

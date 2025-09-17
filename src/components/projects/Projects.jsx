@@ -10,6 +10,12 @@ const Projects = () => {
       tech: ["AI", "IoT", "Python", "Flask"],
     },
     {
+      title: "Smart Window System",
+      description: "The window system that maintains room temperature and light.",
+      emoji: "🪟",
+      tech: ["Tinkercad", "IoT", "C++", "Arduino", "Sensors"],
+    },
+    {
       title: "AI-powered Air Quality Monitoring",
       description: "Monitors air quality in real-time and provides health recommendations.",
       emoji: "🌬️",
