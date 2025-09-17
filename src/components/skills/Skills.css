@@ -24,8 +24,8 @@
 }
 
 .skill-card {
-  background: #292945;
-  padding: 20px;
+  background: #eaeaea;
+  padding: 20px;  
   border-radius: 15px;
   width: 200px;
   transition: 0.4s ease;
