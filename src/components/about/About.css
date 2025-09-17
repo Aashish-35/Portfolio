@@ -1,19 +1,42 @@
 .about-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  color: #fff;
 }
 
 .about-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #00e6e6;
   margin-bottom: 20px;
+  text-shadow: 0 3px 10px rgba(0, 230, 230, 0.5);
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-.about-description {
+.about-intro {
   font-size: 1.2rem;
-  color: #5a5c69;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto 40px auto;
+  line-height: 1.7;
+  color: #41360f;
+}
+
+.about-extra {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.about-extra h3 {
+  font-size: 1.5rem;
+  color: #00e6e6;
+  margin-top: 25px;
+}
+
+.about-extra p {
+  font-size: 1.05rem;
+  color: #2d2424;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .about-skills {
@@ -23,33 +46,107 @@
   flex-wrap: wrap;
 }
 
+.about-skills p {
+  font-size: 1rem;
+  color: #110c0c;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
 .skill-card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 25px;
-  width: 220px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 240px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 230, 230, 0.4);
 }
 
 .skill-icon {
-  font-size: 50px;
+  font-size: 55px;
   margin-bottom: 15px;
+  animation: bounce 2s infinite;
 }
 
 .skill-card h3 {
   margin-top: 10px;
-  font-size: 1.2rem;
-  color: #2e3a59;
+  font-size: 1.3rem;
+  color: #ffffff;
 }
 
 .skill-card p {
-  font-size: 0.95rem;
-  color: #858796;
+  font-size: 1rem;
+  color: #d1d1d1;
   margin-top: 10px;
+  line-height: 1.4;
 }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+  }
+
+  .about-extra {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .about-extra h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-card {
+    width: 200px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .skill-icon {
+    font-size: 40px;
+  }
+}
+
